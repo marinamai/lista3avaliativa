@@ -13,10 +13,6 @@ int main() {
     fgets(diaSemana, sizeof(diaSemana), stdin);
     diaSemana[strcspn(diaSemana, "\n")] = '\0'; 
 
-    for (int i = 0; diaSemana[i] != '\0'; i++) {
-        diaSemana[i] = toupper(diaSemana[i]);
-    }
-
     int diaInvalido = (strcmp(diaSemana, "SEGUNDA-FEIRA") != 0 &&
                        strcmp(diaSemana, "TERCA-FEIRA") != 0 &&
                        strcmp(diaSemana, "QUARTA-FEIRA") != 0 &&
